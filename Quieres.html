@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Mi amor</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style>
+      body {
+        background-color: pink;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+      }
+      .img{
+        justify-content: center;
+        align-items: center;
+      }
+      .title1{
+        font-size: 8vh;
+        color: red;
+      }
+      #btnSi{
+        font-weight: bold;
+        color: black;
+        background-color: green;
+        width: 100px;
+        height: 100px;
+        font-size: 60px;
+      }
+      #btnNo{
+        font-weight: bold;
+        color: black;
+        background-color: red;
+      }
+    </style>
+    <script>
+      function accionParaCuandoEllaDigaQueSi() {
+        alert("ahora la tienes que pasar conmigo sino me pongo triste <3");
+      }
+
+      function mueveElBoton() {
+        width = window.innerWidth;
+        height = window.innerHeight;
+
+        newWidth = Math.random() * width;
+        newHeight = Math.random() * height;
+
+        document.getElementById("btnNo").style.position = "absolute";
+        document.getElementById("btnNo").style.left = newWidth + "px";
+        document.getElementById("btnNo").style.top = newHeight + "px";
+      }
+    </script>
+  </head>
+  <body>
+    <h3 class="title1">Quieres ser mi San Valentin?</h3>
+    <input
+      type="button"
+      onclick="accionParaCuandoEllaDigaQueSi()"
+      id="btnSi"
+      value="Si"
+    />
+    <input type="button" id="btnNo" onmouseover="mueveElBoton()" value="No" />
+    <img src="imagen1.jpg" width="30%" class="img"/>
+  </body>
+</html>
